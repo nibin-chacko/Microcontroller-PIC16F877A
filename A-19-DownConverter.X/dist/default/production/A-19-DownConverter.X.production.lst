@@ -1,0 +1,1498 @@
+
+
+Microchip MPLAB XC8 Assembler V2.10 build 88905656 
+                                                                                               Thu Jun 11 17:26:22 2020
+
+Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
+     1                           	processor	16F877A
+     2                           	opt	pw 120
+     3                           	opt	flic
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	strings,global,class=STRING,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	inittext,global,class=CODE,delta=2
+     9                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    10                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	maintext,global,class=CODE,split=1,delta=2
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2,group=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2
+    14                           	psect	text3,local,class=CODE,merge=1,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	text6,local,class=CODE,merge=1,delta=2
+    18                           	dabs	1,0x7E,2
+    19  0000                     
+    20                           ; Version 2.10
+    21                           ; Generated 31/07/2019 GMT
+    22                           ; 
+    23                           ; Copyright © 2019, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    24                           ; All rights reserved.
+    25                           ; 
+    26                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    27                           ; 
+    28                           ; Redistribution and use in source and binary forms, with or without modification, are
+    29                           ; permitted provided that the following conditions are met:
+    30                           ; 
+    31                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    32                           ;        conditions and the following disclaimer.
+    33                           ; 
+    34                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    35                           ;        of conditions and the following disclaimer in the documentation and/or other
+    36                           ;        materials provided with the distribution.
+    37                           ; 
+    38                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    39                           ;        software without specific prior written permission.
+    40                           ; 
+    41                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    42                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    43                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    44                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    45                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    46                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    47                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    48                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    49                           ; 
+    50                           ; 
+    51                           ; Code-generator required, PIC16F877A Definitions
+    52                           ; 
+    53                           ; SFR Addresses
+    54  0000                     	;# 
+    55  0001                     	;# 
+    56  0002                     	;# 
+    57  0003                     	;# 
+    58  0004                     	;# 
+    59  0005                     	;# 
+    60  0006                     	;# 
+    61  0007                     	;# 
+    62  0008                     	;# 
+    63  0009                     	;# 
+    64  000A                     	;# 
+    65  000B                     	;# 
+    66  000C                     	;# 
+    67  000D                     	;# 
+    68  000E                     	;# 
+    69  000E                     	;# 
+    70  000F                     	;# 
+    71  0010                     	;# 
+    72  0011                     	;# 
+    73  0012                     	;# 
+    74  0013                     	;# 
+    75  0014                     	;# 
+    76  0015                     	;# 
+    77  0015                     	;# 
+    78  0016                     	;# 
+    79  0017                     	;# 
+    80  0018                     	;# 
+    81  0019                     	;# 
+    82  001A                     	;# 
+    83  001B                     	;# 
+    84  001B                     	;# 
+    85  001C                     	;# 
+    86  001D                     	;# 
+    87  001E                     	;# 
+    88  001F                     	;# 
+    89  0081                     	;# 
+    90  0085                     	;# 
+    91  0086                     	;# 
+    92  0087                     	;# 
+    93  0088                     	;# 
+    94  0089                     	;# 
+    95  008C                     	;# 
+    96  008D                     	;# 
+    97  008E                     	;# 
+    98  0091                     	;# 
+    99  0092                     	;# 
+   100  0093                     	;# 
+   101  0094                     	;# 
+   102  0098                     	;# 
+   103  0099                     	;# 
+   104  009C                     	;# 
+   105  009D                     	;# 
+   106  009E                     	;# 
+   107  009F                     	;# 
+   108  010C                     	;# 
+   109  010D                     	;# 
+   110  010E                     	;# 
+   111  010F                     	;# 
+   112  018C                     	;# 
+   113  018D                     	;# 
+   114  0000                     	;# 
+   115  0001                     	;# 
+   116  0002                     	;# 
+   117  0003                     	;# 
+   118  0004                     	;# 
+   119  0005                     	;# 
+   120  0006                     	;# 
+   121  0007                     	;# 
+   122  0008                     	;# 
+   123  0009                     	;# 
+   124  000A                     	;# 
+   125  000B                     	;# 
+   126  000C                     	;# 
+   127  000D                     	;# 
+   128  000E                     	;# 
+   129  000E                     	;# 
+   130  000F                     	;# 
+   131  0010                     	;# 
+   132  0011                     	;# 
+   133  0012                     	;# 
+   134  0013                     	;# 
+   135  0014                     	;# 
+   136  0015                     	;# 
+   137  0015                     	;# 
+   138  0016                     	;# 
+   139  0017                     	;# 
+   140  0018                     	;# 
+   141  0019                     	;# 
+   142  001A                     	;# 
+   143  001B                     	;# 
+   144  001B                     	;# 
+   145  001C                     	;# 
+   146  001D                     	;# 
+   147  001E                     	;# 
+   148  001F                     	;# 
+   149  0081                     	;# 
+   150  0085                     	;# 
+   151  0086                     	;# 
+   152  0087                     	;# 
+   153  0088                     	;# 
+   154  0089                     	;# 
+   155  008C                     	;# 
+   156  008D                     	;# 
+   157  008E                     	;# 
+   158  0091                     	;# 
+   159  0092                     	;# 
+   160  0093                     	;# 
+   161  0094                     	;# 
+   162  0098                     	;# 
+   163  0099                     	;# 
+   164  009C                     	;# 
+   165  009D                     	;# 
+   166  009E                     	;# 
+   167  009F                     	;# 
+   168  010C                     	;# 
+   169  010D                     	;# 
+   170  010E                     	;# 
+   171  010F                     	;# 
+   172  018C                     	;# 
+   173  018D                     	;# 
+   174  0000                     	;# 
+   175  0001                     	;# 
+   176  0002                     	;# 
+   177  0003                     	;# 
+   178  0004                     	;# 
+   179  0005                     	;# 
+   180  0006                     	;# 
+   181  0007                     	;# 
+   182  0008                     	;# 
+   183  0009                     	;# 
+   184  000A                     	;# 
+   185  000B                     	;# 
+   186  000C                     	;# 
+   187  000D                     	;# 
+   188  000E                     	;# 
+   189  000E                     	;# 
+   190  000F                     	;# 
+   191  0010                     	;# 
+   192  0011                     	;# 
+   193  0012                     	;# 
+   194  0013                     	;# 
+   195  0014                     	;# 
+   196  0015                     	;# 
+   197  0015                     	;# 
+   198  0016                     	;# 
+   199  0017                     	;# 
+   200  0018                     	;# 
+   201  0019                     	;# 
+   202  001A                     	;# 
+   203  001B                     	;# 
+   204  001B                     	;# 
+   205  001C                     	;# 
+   206  001D                     	;# 
+   207  001E                     	;# 
+   208  001F                     	;# 
+   209  0081                     	;# 
+   210  0085                     	;# 
+   211  0086                     	;# 
+   212  0087                     	;# 
+   213  0088                     	;# 
+   214  0089                     	;# 
+   215  008C                     	;# 
+   216  008D                     	;# 
+   217  008E                     	;# 
+   218  0091                     	;# 
+   219  0092                     	;# 
+   220  0093                     	;# 
+   221  0094                     	;# 
+   222  0098                     	;# 
+   223  0099                     	;# 
+   224  009C                     	;# 
+   225  009D                     	;# 
+   226  009E                     	;# 
+   227  009F                     	;# 
+   228  010C                     	;# 
+   229  010D                     	;# 
+   230  010E                     	;# 
+   231  010F                     	;# 
+   232  018C                     	;# 
+   233  018D                     	;# 
+   234                           
+   235                           	psect	idataBANK0
+   236  0656                     __pidataBANK0:	
+   237                           
+   238                           ;initializer for main@F947
+   239  0656  3430               	retlw	48
+   240  0657  3430               	retlw	48
+   241  0658  3430               	retlw	48
+   242  0659  3430               	retlw	48
+   243  065A  3430               	retlw	48
+   244  065B  3430               	retlw	48
+   245  065C  3430               	retlw	48
+   246  065D  3430               	retlw	48
+   247  065E  3430               	retlw	48
+   248  065F  3430               	retlw	48
+   249  0660  3400               	retlw	0
+   250                           
+   251                           ;initializer for main@F945
+   252  0661  3439               	retlw	57
+   253  0662  3439               	retlw	57
+   254  0663  3439               	retlw	57
+   255  0664  3439               	retlw	57
+   256  0665  3439               	retlw	57
+   257  0666  3439               	retlw	57
+   258  0667  3439               	retlw	57
+   259  0668  3439               	retlw	57
+   260  0669  3439               	retlw	57
+   261  066A  3439               	retlw	57
+   262  066B  3400               	retlw	0
+   263  0008                     _PORTD	set	8
+   264  0049                     _RE1	set	73
+   265  004A                     _RE2	set	74
+   266  0088                     _TRISD	set	136
+   267  0449                     _TRISE1	set	1097
+   268  044A                     _TRISE2	set	1098
+   269                           
+   270                           	psect	strings
+   271  0003                     __pstrings:	
+   272  0003                     stringtab:	
+   273  0003                     __stringtab:	
+   274                           
+   275                           ;	String table - string pointers are 1 byte each
+   276  0003  1BFF               	btfsc	btemp+1,7
+   277  0004  280D               	ljmp	stringcode
+   278  0005  1383               	bcf	3,7
+   279  0006  187F               	btfsc	btemp+1,0
+   280  0007  1783               	bsf	3,7
+   281  0008  0800               	movf	0,w
+   282  0009  0A84               	incf	4,f
+   283  000A  1903               	skipnz
+   284  000B  0AFF               	incf	btemp+1,f
+   285  000C  0008               	return
+   286  000D                     stringcode:	
+   287  000D                     stringdir:	
+   288  000D  3000               	movlw	high stringdir
+   289  000E  008A               	movwf	10
+   290  000F  0804               	movf	4,w
+   291  0010  0A84               	incf	4,f
+   292  0011  0782               	addwf	2,f
+   293  0012                     __stringbase:	
+   294  0012  3400               	retlw	0
+   295  0013                     __end_of__stringtab:	
+   296  0013                     STR_1:	
+   297  0013  3431               	retlw	49	;'1'
+   298  0014  3430               	retlw	48	;'0'
+   299  0015  3420               	retlw	32	;' '
+   300  0016  3444               	retlw	68	;'D'
+   301  0017  3469               	retlw	105	;'i'
+   302  0018  3467               	retlw	103	;'g'
+   303  0019  3469               	retlw	105	;'i'
+   304  001A  3474               	retlw	116	;'t'
+   305  001B  3420               	retlw	32	;' '
+   306  001C  3463               	retlw	99	;'c'
+   307  001D  346F               	retlw	111	;'o'
+   308  001E  3475               	retlw	117	;'u'
+   309  001F  346E               	retlw	110	;'n'
+   310  0020  3474               	retlw	116	;'t'
+   311  0021  3465               	retlw	101	;'e'
+   312  0022  3472               	retlw	114	;'r'
+   313  0023  3400               	retlw	0
+   314  0024                     STR_3:	
+   315  0024  3430               	retlw	48	;'0'
+   316  0025  3430               	retlw	48	;'0'
+   317  0026  3430               	retlw	48	;'0'
+   318  0027  3430               	retlw	48	;'0'
+   319  0028  3430               	retlw	48	;'0'
+   320  0029  3430               	retlw	48	;'0'
+   321  002A  3430               	retlw	48	;'0'
+   322  002B  3430               	retlw	48	;'0'
+   323  002C  3430               	retlw	48	;'0'
+   324  002D  3430               	retlw	48	;'0'
+   325  002E  3400               	retlw	0
+   326  002F                     STR_2:	
+   327  002F  3463               	retlw	99	;'c'
+   328  0030  346F               	retlw	111	;'o'
+   329  0031  3475               	retlw	117	;'u'
+   330  0032  346E               	retlw	110	;'n'
+   331  0033  3474               	retlw	116	;'t'
+   332  0034  343A               	retlw	58	;':'
+   333  0035  3400               	retlw	0
+   334                           
+   335                           ; #config settings
+   336  0000                     
+   337                           	psect	cinit
+   338  07EE                     start_initialization:	
+   339  07EE                     __initialization:	
+   340                           
+   341                           ; Initialize objects allocated to BANK0
+   342  07EE  1383               	bcf	3,7	;select IRP bank0
+   343  07EF  3050               	movlw	low (__pdataBANK0+22)
+   344  07F0  00FD               	movwf	btemp+-1
+   345  07F1  3006               	movlw	high __pidataBANK0
+   346  07F2  00FE               	movwf	btemp
+   347  07F3  3056               	movlw	low __pidataBANK0
+   348  07F4  00FF               	movwf	btemp+1
+   349  07F5  303A               	movlw	low __pdataBANK0
+   350  07F6  0084               	movwf	4
+   351  07F7  120A  118A  2647  120A  118A  	fcall	init_ram0
+   352  07FC                     end_of_initialization:	
+   353                           ;End of C runtime variable initialization code
+   354                           
+   355  07FC                     __end_of__initialization:	
+   356  07FC  0183               	clrf	3
+   357  07FD  120A  118A  2F40   	ljmp	_main	;jump to C main() function
+   358                           
+   359                           	psect	dataBANK0
+   360  003A                     __pdataBANK0:	
+   361  003A                     main@F947:	
+   362  003A                     	ds	11
+   363  0045                     main@F945:	
+   364  0045                     	ds	11
+   365                           
+   366                           	psect	inittext
+   367  0643                     init_fetch0:	
+   368                           ;	Called with low address in FSR and high address in W
+   369                           
+   370  0643  087E               	movf	btemp,w
+   371  0644  008A               	movwf	10
+   372  0645  087F               	movf	btemp+1,w
+   373  0646  0082               	movwf	2
+   374  0647                     init_ram0:	
+   375                           ;Called with:
+   376                           ;	high address of idata address in btemp 
+   377                           ;	low address of idata address in btemp+1 
+   378                           ;	low address of data in FSR
+   379                           ;	high address + 1 of data in btemp-1
+   380                           
+   381  0647  120A  118A  2643  120A  118A  	fcall	init_fetch0
+   382  064C  0080               	movwf	0
+   383  064D  0A84               	incf	4,f
+   384  064E  0804               	movf	4,w
+   385  064F  067D               	xorwf	btemp+-1,w
+   386  0650  1903               	btfsc	3,2
+   387  0651  3400               	retlw	0
+   388  0652  0AFF               	incf	btemp+1,f
+   389  0653  1903               	btfsc	3,2
+   390  0654  0AFE               	incf	btemp,f
+   391  0655  2E47               	goto	init_ram0
+   392                           
+   393                           	psect	cstackCOMMON
+   394  0070                     __pcstackCOMMON:	
+   395  0070                     ?_clcd_write:	
+   396  0070                     ?_init_display_controller:	
+   397                           ; 1 bytes @ 0x0
+   398                           
+   399  0070                     ?_init_clcd:	
+   400                           ; 1 bytes @ 0x0
+   401                           
+   402  0070                     ?_init_config:	
+   403                           ; 1 bytes @ 0x0
+   404                           
+   405  0070                     ?_main:	
+   406                           ; 1 bytes @ 0x0
+   407                           
+   408  0070                     ?_strcmp:	
+   409                           ; 1 bytes @ 0x0
+   410                           
+   411  0070                     clcd_write@mode:	
+   412                           ; 2 bytes @ 0x0
+   413                           
+   414  0070                     strcmp@s2:	
+   415                           ; 1 bytes @ 0x0
+   416                           
+   417                           
+   418                           ; 1 bytes @ 0x0
+   419  0070                     	ds	1
+   420  0071                     ??_clcd_write:	
+   421                           
+   422                           ; 1 bytes @ 0x1
+   423  0071                     	ds	1
+   424  0072                     ??_strcmp:	
+   425                           
+   426                           ; 1 bytes @ 0x2
+   427  0072                     	ds	1
+   428  0073                     clcd_write@byte:	
+   429                           
+   430                           ; 1 bytes @ 0x3
+   431  0073                     	ds	1
+   432  0074                     ??_init_display_controller:	
+   433  0074                     ?_clcd_print:	
+   434                           ; 1 bytes @ 0x4
+   435                           
+   436  0074                     clcd_print@str:	
+   437                           ; 1 bytes @ 0x4
+   438                           
+   439                           
+   440                           ; 2 bytes @ 0x4
+   441  0074                     	ds	1
+   442  0075                     strcmp@r:	
+   443                           
+   444                           ; 1 bytes @ 0x5
+   445  0075                     	ds	1
+   446  0076                     ??_init_clcd:	
+   447  0076                     ??_init_config:	
+   448                           ; 1 bytes @ 0x6
+   449                           
+   450  0076                     clcd_print@addr:	
+   451                           ; 1 bytes @ 0x6
+   452                           
+   453  0076                     strcmp@s1:	
+   454                           ; 1 bytes @ 0x6
+   455                           
+   456                           
+   457                           ; 1 bytes @ 0x6
+   458  0076                     	ds	1
+   459  0077                     ??_clcd_print:	
+   460  0077                     ??_main:	
+   461                           ; 1 bytes @ 0x7
+   462                           
+   463                           
+   464                           ; 1 bytes @ 0x7
+   465  0077                     	ds	4
+   466                           
+   467                           	psect	cstackBANK0
+   468  0020                     __pcstackBANK0:	
+   469  0020                     main@data1:	
+   470                           
+   471                           ; 11 bytes @ 0x0
+   472  0020                     	ds	13
+   473  002D                     main@data:	
+   474                           
+   475                           ; 11 bytes @ 0xD
+   476  002D                     	ds	11
+   477  0038                     main@i:	
+   478                           
+   479                           ; 2 bytes @ 0x18
+   480  0038                     	ds	2
+   481                           
+   482                           	psect	maintext
+   483  0740                     __pmaintext:	
+   484 ;;
+   485 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   486 ;;
+   487 ;; *************** function _main *****************
+   488 ;; Defined at:
+   489 ;;		line 17 in file "/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c"
+   490 ;; Parameters:    Size  Location     Type
+   491 ;;		None
+   492 ;; Auto vars:     Size  Location     Type
+   493 ;;  i               2   24[BANK0 ] int 
+   494 ;;  data           11   13[BANK0 ] unsigned char [11]
+   495 ;;  data1          11    0[BANK0 ] unsigned char [11]
+   496 ;;  wait            2    0        int 
+   497 ;; Return value:  Size  Location     Type
+   498 ;;                  1    wreg      void 
+   499 ;; Registers used:
+   500 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   501 ;; Tracked objects:
+   502 ;;		On entry : B00/0
+   503 ;;		On exit  : 0/0
+   504 ;;		Unchanged: 0/0
+   505 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   506 ;;      Params:         0       0       0       0       0
+   507 ;;      Locals:         0      26       0       0       0
+   508 ;;      Temps:          4       0       0       0       0
+   509 ;;      Totals:         4      26       0       0       0
+   510 ;;Total ram usage:       30 bytes
+   511 ;; Hardware stack levels required when called:    4
+   512 ;; This function calls:
+   513 ;;		_clcd_print
+   514 ;;		_init_config
+   515 ;;		_strcmp
+   516 ;; This function is called by:
+   517 ;;		Startup code after reset
+   518 ;; This function uses a non-reentrant model
+   519 ;;
+   520                           
+   521                           
+   522                           ;psect for function _main
+   523  0740                     _main:	
+   524  0740                     l810:	
+   525                           ;incstack = 0
+   526                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   527                           
+   528                           
+   529                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 18:            
+      +                           if(data[i] < '0')
+   530  0740  120A  118A  2632  120A  118A  	fcall	_init_config
+   531  0745                     l812:	
+   532  0745                     l814:	
+   533                           
+   534                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 21:            
+      +                               data[i] = '9';
+   535  0745  302D               	movlw	main@data& (0+255)
+   536  0746  0084               	movwf	4
+   537  0747  3045               	movlw	low main@F945
+   538  0748  00F7               	movwf	??_main
+   539  0749  0804               	movf	4,w
+   540  074A  00F8               	movwf	??_main+1
+   541  074B  300B               	movlw	11
+   542  074C  00F9               	movwf	??_main+2
+   543  074D                     u160:	
+   544  074D  0877               	movf	??_main,w
+   545  074E  0084               	movwf	4
+   546  074F  1383               	bcf	3,7	;select IRP bank0
+   547  0750  0800               	movf	0,w
+   548  0751  00FA               	movwf	??_main+3
+   549  0752  0AF7               	incf	??_main,f
+   550  0753  0878               	movf	??_main+1,w
+   551  0754  0084               	movwf	4
+   552  0755  087A               	movf	??_main+3,w
+   553  0756  0080               	movwf	0
+   554  0757  0AF8               	incf	??_main+1,f
+   555  0758  0BF9               	decfsz	??_main+2,f
+   556  0759  2F4D               	goto	u160
+   557  075A                     l816:	
+   558                           
+   559                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 22:            
+      +                           }
+   560  075A  3020               	movlw	main@data1& (0+255)
+   561  075B  0084               	movwf	4
+   562  075C  303A               	movlw	low main@F947
+   563  075D  00F7               	movwf	??_main
+   564  075E  0804               	movf	4,w
+   565  075F  00F8               	movwf	??_main+1
+   566  0760  300B               	movlw	11
+   567  0761  00F9               	movwf	??_main+2
+   568  0762                     u170:	
+   569  0762  0877               	movf	??_main,w
+   570  0763  0084               	movwf	4
+   571  0764  1383               	bcf	3,7	;select IRP bank0
+   572  0765  0800               	movf	0,w
+   573  0766  00FA               	movwf	??_main+3
+   574  0767  0AF7               	incf	??_main,f
+   575  0768  0878               	movf	??_main+1,w
+   576  0769  0084               	movwf	4
+   577  076A  087A               	movf	??_main+3,w
+   578  076B  0080               	movwf	0
+   579  076C  0AF8               	incf	??_main+1,f
+   580  076D  0BF9               	decfsz	??_main+2,f
+   581  076E  2F62               	goto	u170
+   582  076F                     l818:	
+   583                           
+   584                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 23:         }
+   585  076F  3001               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+   586  0770  00F4               	movwf	clcd_print@str
+   587  0771  3080               	movlw	128
+   588  0772  00F5               	movwf	clcd_print@str+1
+   589  0773  3080               	movlw	128
+   590  0774  00F7               	movwf	??_main
+   591  0775  0877               	movf	??_main,w
+   592  0776  00F6               	movwf	clcd_print@addr
+   593  0777  120A  118A  26BA  120A  118A  	fcall	_clcd_print
+   594  077C                     l820:	
+   595                           
+   596                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 24:            
+      +                           clcd_print(data,(0xC0 + 6));
+   597  077C  301D               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
+   598  077D  00F4               	movwf	clcd_print@str
+   599  077E  3080               	movlw	128
+   600  077F  00F5               	movwf	clcd_print@str+1
+   601  0780  30C0               	movlw	192
+   602  0781  00F7               	movwf	??_main
+   603  0782  0877               	movf	??_main,w
+   604  0783  00F6               	movwf	clcd_print@addr
+   605  0784  120A  118A  26BA  120A  118A  	fcall	_clcd_print
+   606  0789                     l822:	
+   607                           
+   608                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 25:            
+      +                           if(strcmp(data,"0000000000")==0)
+   609  0789  302D               	movlw	(low (main@data| 0))& (0+255)
+   610  078A  00F4               	movwf	clcd_print@str
+   611  078B  3000               	movlw	0
+   612  078C  00F5               	movwf	clcd_print@str+1
+   613  078D  30C6               	movlw	198
+   614  078E  00F7               	movwf	??_main
+   615  078F  0877               	movf	??_main,w
+   616  0790  00F6               	movwf	clcd_print@addr
+   617  0791  120A  118A  26BA  120A  118A  	fcall	_clcd_print
+   618  0796                     l824:	
+   619                           
+   620                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 28:            
+      +                           }
+   621  0796  1283               	bcf	3,5	;RP0=0, select bank0
+   622  0797  1303               	bcf	3,6	;RP1=0, select bank0
+   623  0798  01B8               	clrf	main@i
+   624  0799  01B9               	clrf	main@i+1
+   625  079A                     l830:	
+   626                           
+   627                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 29: ;/../home/u
+      +                          buntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 30:         data[9]--;
+   628  079A  1283               	bcf	3,5	;RP0=0, select bank0
+   629  079B  1303               	bcf	3,6	;RP1=0, select bank0
+   630  079C  0838               	movf	main@i,w
+   631  079D  3E2D               	addlw	(low (main@data| 0))& (0+255)
+   632  079E  0084               	movwf	4
+   633  079F  3030               	movlw	48
+   634  07A0  1383               	bcf	3,7	;select IRP bank0
+   635  07A1  0200               	subwf	0,w
+   636  07A2  1803               	skipnc
+   637  07A3  2FA5               	goto	u181
+   638  07A4  2FA6               	goto	u180
+   639  07A5                     u181:	
+   640  07A5  2FB3               	goto	l834
+   641  07A6                     u180:	
+   642  07A6                     l832:	
+   643                           
+   644                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 31: ;/../home/u
+      +                          buntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 32:     }
+   645  07A6  0838               	movf	main@i,w
+   646  07A7  3EFF               	addlw	255
+   647  07A8  3E2D               	addlw	(low (main@data| 0))& (0+255)
+   648  07A9  0084               	movwf	4
+   649  07AA  3001               	movlw	1
+   650  07AB  0280               	subwf	0,f
+   651                           
+   652                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 33:     return;
+   653  07AC  3039               	movlw	57
+   654  07AD  00F7               	movwf	??_main
+   655  07AE  0838               	movf	main@i,w
+   656  07AF  3E2D               	addlw	(low (main@data| 0))& (0+255)
+   657  07B0  0084               	movwf	4
+   658  07B1  0877               	movf	??_main,w
+   659  07B2  0080               	movwf	0
+   660  07B3                     l834:	
+   661  07B3  3001               	movlw	1
+   662  07B4  07B8               	addwf	main@i,f
+   663  07B5  1803               	skipnc
+   664  07B6  0AB9               	incf	main@i+1,f
+   665  07B7  3000               	movlw	0
+   666  07B8  07B9               	addwf	main@i+1,f
+   667  07B9                     l836:	
+   668  07B9  0839               	movf	main@i+1,w
+   669  07BA  3A80               	xorlw	128
+   670  07BB  00FF               	movwf	btemp+1
+   671  07BC  3080               	movlw	128
+   672  07BD  027F               	subwf	btemp+1,w
+   673  07BE  1D03               	skipz
+   674  07BF  2FC2               	goto	u195
+   675  07C0  300A               	movlw	10
+   676  07C1  0238               	subwf	main@i,w
+   677  07C2                     u195:	
+   678  07C2  1C03               	skipc
+   679  07C3  2FC5               	goto	u191
+   680  07C4  2FC6               	goto	u190
+   681  07C5                     u191:	
+   682  07C5  2F9A               	goto	l830
+   683  07C6                     u190:	
+   684  07C6                     l838:	
+   685  07C6  302D               	movlw	(low (main@data| 0))& (0+255)
+   686  07C7  00F4               	movwf	clcd_print@str
+   687  07C8  3000               	movlw	0
+   688  07C9  00F5               	movwf	clcd_print@str+1
+   689  07CA  30C6               	movlw	198
+   690  07CB  00F7               	movwf	??_main
+   691  07CC  0877               	movf	??_main,w
+   692  07CD  00F6               	movwf	clcd_print@addr
+   693  07CE  120A  118A  26BA  120A  118A  	fcall	_clcd_print
+   694  07D3                     l840:	
+   695  07D3  3012               	movlw	(low ((STR_3-__stringbase)| (0+32768)))& (0+255)
+   696  07D4  00F7               	movwf	??_main
+   697  07D5  0877               	movf	??_main,w
+   698  07D6  00F0               	movwf	strcmp@s2
+   699  07D7  302D               	movlw	(low (main@data| 0))& (0+255)
+   700  07D8  120A  118A  268C  120A  118A  	fcall	_strcmp
+   701  07DD  0870               	movf	?_strcmp,w
+   702  07DE  0471               	iorwf	?_strcmp+1,w
+   703  07DF  1D03               	btfss	3,2
+   704  07E0  2FE2               	goto	u201
+   705  07E1  2FE3               	goto	u200
+   706  07E2                     u201:	
+   707  07E2  2FE6               	goto	l842
+   708  07E3                     u200:	
+   709  07E3                     l52:	
+   710  07E3  120A  118A  2F40   	ljmp	$	;# 
+   711  07E6                     l842:	
+   712  07E6  3001               	movlw	1
+   713  07E7  1283               	bcf	3,5	;RP0=0, select bank0
+   714  07E8  1303               	bcf	3,6	;RP1=0, select bank0
+   715  07E9  02B6               	subwf	main@data+9,f
+   716  07EA  2F96               	goto	l824
+   717  07EB  120A  118A  2800   	ljmp	start
+   718  07EE                     __end_of_main:	
+   719                           
+   720                           	psect	text1
+   721  068C                     __ptext1:	
+   722 ;; *************** function _strcmp *****************
+   723 ;; Defined at:
+   724 ;;		line 33 in file "/opt/microchip/xc8/v2.10/pic/sources/c90/common/strcmp.c"
+   725 ;; Parameters:    Size  Location     Type
+   726 ;;  s1              1    wreg     PTR const unsigned char 
+   727 ;;		 -> main@data(11), 
+   728 ;;  s2              1    0[COMMON] PTR const unsigned char 
+   729 ;;		 -> STR_3(11), 
+   730 ;; Auto vars:     Size  Location     Type
+   731 ;;  s1              1    6[COMMON] PTR const unsigned char 
+   732 ;;		 -> main@data(11), 
+   733 ;;  r               1    5[COMMON] char 
+   734 ;; Return value:  Size  Location     Type
+   735 ;;                  2    0[COMMON] int 
+   736 ;; Registers used:
+   737 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+   738 ;; Tracked objects:
+   739 ;;		On entry : 0/0
+   740 ;;		On exit  : 0/0
+   741 ;;		Unchanged: 0/0
+   742 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   743 ;;      Params:         2       0       0       0       0
+   744 ;;      Locals:         2       0       0       0       0
+   745 ;;      Temps:          3       0       0       0       0
+   746 ;;      Totals:         7       0       0       0       0
+   747 ;;Total ram usage:        7 bytes
+   748 ;; Hardware stack levels used:    2
+   749 ;; This function calls:
+   750 ;;		Nothing
+   751 ;; This function is called by:
+   752 ;;		_main
+   753 ;; This function uses a non-reentrant model
+   754 ;;
+   755                           
+   756                           
+   757                           ;psect for function _strcmp
+   758  068C                     _strcmp:	
+   759                           
+   760                           ;incstack = 0
+   761                           ; Regs used in _strcmp: [wreg-fsr0h+status,2+status,0+pclath]
+   762                           ;strcmp@s1 stored from wreg
+   763  068C  00F6               	movwf	strcmp@s1
+   764  068D                     l796:	
+   765  068D  2E96               	goto	l802
+   766  068E                     l798:	
+   767  068E  3001               	movlw	1
+   768  068F  00F2               	movwf	??_strcmp
+   769  0690  0872               	movf	??_strcmp,w
+   770  0691  07F6               	addwf	strcmp@s1,f
+   771  0692                     l800:	
+   772  0692  3001               	movlw	1
+   773  0693  00F2               	movwf	??_strcmp
+   774  0694  0872               	movf	??_strcmp,w
+   775  0695  07F0               	addwf	strcmp@s2,f
+   776  0696                     l802:	
+   777  0696  0870               	movf	strcmp@s2,w
+   778  0697  0084               	movwf	4
+   779  0698  120A  118A  200D  120A  118A  	fcall	stringdir
+   780  069D  00F2               	movwf	??_strcmp
+   781  069E  0876               	movf	strcmp@s1,w
+   782  069F  0084               	movwf	4
+   783  06A0  1383               	bcf	3,7	;select IRP bank0
+   784  06A1  0800               	movf	0,w
+   785  06A2  00F3               	movwf	??_strcmp+1
+   786  06A3  0872               	movf	??_strcmp,w
+   787  06A4  0273               	subwf	??_strcmp+1,w
+   788  06A5  00F4               	movwf	??_strcmp+2
+   789  06A6  0874               	movf	??_strcmp+2,w
+   790  06A7  00F5               	movwf	strcmp@r
+   791  06A8  0875               	movf	strcmp@r,w
+   792  06A9  1D03               	btfss	3,2
+   793  06AA  2EAC               	goto	u141
+   794  06AB  2EAD               	goto	u140
+   795  06AC                     u141:	
+   796  06AC  2EB4               	goto	l806
+   797  06AD                     u140:	
+   798  06AD                     l804:	
+   799  06AD  0876               	movf	strcmp@s1,w
+   800  06AE  0084               	movwf	4
+   801  06AF  0800               	movf	0,w
+   802  06B0  1D03               	btfss	3,2
+   803  06B1  2EB3               	goto	u151
+   804  06B2  2EB4               	goto	u150
+   805  06B3                     u151:	
+   806  06B3  2E8E               	goto	l798
+   807  06B4                     u150:	
+   808  06B4                     l806:	
+   809  06B4  0875               	movf	strcmp@r,w
+   810  06B5  00F0               	movwf	?_strcmp
+   811  06B6  01F1               	clrf	?_strcmp+1
+   812  06B7  1BF0               	btfsc	?_strcmp,7
+   813  06B8  03F1               	decf	?_strcmp+1,f
+   814  06B9                     l592:	
+   815  06B9  0008               	return
+   816  06BA                     __end_of_strcmp:	
+   817                           
+   818                           	psect	text2
+   819  0632                     __ptext2:	
+   820 ;; *************** function _init_config *****************
+   821 ;; Defined at:
+   822 ;;		line 11 in file "/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c"
+   823 ;; Parameters:    Size  Location     Type
+   824 ;;		None
+   825 ;; Auto vars:     Size  Location     Type
+   826 ;;		None
+   827 ;; Return value:  Size  Location     Type
+   828 ;;                  1    wreg      void 
+   829 ;; Registers used:
+   830 ;;		wreg, status,2, status,0, pclath, cstack
+   831 ;; Tracked objects:
+   832 ;;		On entry : 0/0
+   833 ;;		On exit  : 0/0
+   834 ;;		Unchanged: 0/0
+   835 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   836 ;;      Params:         0       0       0       0       0
+   837 ;;      Locals:         0       0       0       0       0
+   838 ;;      Temps:          0       0       0       0       0
+   839 ;;      Totals:         0       0       0       0       0
+   840 ;;Total ram usage:        0 bytes
+   841 ;; Hardware stack levels used:    1
+   842 ;; Hardware stack levels required when called:    3
+   843 ;; This function calls:
+   844 ;;		_init_clcd
+   845 ;; This function is called by:
+   846 ;;		_main
+   847 ;; This function uses a non-reentrant model
+   848 ;;
+   849                           
+   850                           
+   851                           ;psect for function _init_config
+   852  0632                     _init_config:	
+   853  0632                     l794:	
+   854                           ;incstack = 0
+   855                           ; Regs used in _init_config: [wreg+status,2+status,0+pclath+cstack]
+   856                           
+   857                           
+   858                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/main.c: 13:     clcd_pr
+      +                          int(data,(0xC0 + 6));
+   859  0632  120A  118A  2638  120A  118A  	fcall	_init_clcd
+   860  0637                     l38:	
+   861  0637  0008               	return
+   862  0638                     __end_of_init_config:	
+   863                           
+   864                           	psect	text3
+   865  0638                     __ptext3:	
+   866 ;; *************** function _init_clcd *****************
+   867 ;; Defined at:
+   868 ;;		line 37 in file "/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c"
+   869 ;; Parameters:    Size  Location     Type
+   870 ;;		None
+   871 ;; Auto vars:     Size  Location     Type
+   872 ;;		None
+   873 ;; Return value:  Size  Location     Type
+   874 ;;                  1    wreg      void 
+   875 ;; Registers used:
+   876 ;;		wreg, status,2, status,0, pclath, cstack
+   877 ;; Tracked objects:
+   878 ;;		On entry : 0/0
+   879 ;;		On exit  : 0/0
+   880 ;;		Unchanged: 0/0
+   881 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   882 ;;      Params:         0       0       0       0       0
+   883 ;;      Locals:         0       0       0       0       0
+   884 ;;      Temps:          0       0       0       0       0
+   885 ;;      Totals:         0       0       0       0       0
+   886 ;;Total ram usage:        0 bytes
+   887 ;; Hardware stack levels used:    1
+   888 ;; Hardware stack levels required when called:    2
+   889 ;; This function calls:
+   890 ;;		_init_display_controller
+   891 ;; This function is called by:
+   892 ;;		_init_config
+   893 ;; This function uses a non-reentrant model
+   894 ;;
+   895                           
+   896                           
+   897                           ;psect for function _init_clcd
+   898  0638                     _init_clcd:	
+   899  0638                     l778:	
+   900                           ;incstack = 0
+   901                           ; Regs used in _init_clcd: [wreg+status,2+status,0+pclath+cstack]
+   902                           
+   903                           
+   904                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 40:     TRISD =
+      +                           0x00;
+   905  0638  1683               	bsf	3,5	;RP0=1, select bank1
+   906  0639  1303               	bcf	3,6	;RP1=0, select bank1
+   907  063A  0188               	clrf	8	;volatile
+   908  063B                     l780:	
+   909                           
+   910                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 43:     TRISE2 
+      +                          = 0;
+   911  063B  1109               	bcf	9,2	;volatile
+   912  063C                     l782:	
+   913                           
+   914                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 44:     TRISE1 
+      +                          = 0;
+   915  063C  1089               	bcf	9,1	;volatile
+   916  063D                     l784:	
+   917                           
+   918                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 46:     init_di
+      +                          splay_controller();
+   919  063D  120A  118A  26E9  120A  118A  	fcall	_init_display_controller
+   920  0642                     l23:	
+   921  0642  0008               	return
+   922  0643                     __end_of_init_clcd:	
+   923                           
+   924                           	psect	text4
+   925  06E9                     __ptext4:	
+   926 ;; *************** function _init_display_controller *****************
+   927 ;; Defined at:
+   928 ;;		line 16 in file "/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c"
+   929 ;; Parameters:    Size  Location     Type
+   930 ;;		None
+   931 ;; Auto vars:     Size  Location     Type
+   932 ;;		None
+   933 ;; Return value:  Size  Location     Type
+   934 ;;                  1    wreg      void 
+   935 ;; Registers used:
+   936 ;;		wreg, status,2, status,0, pclath, cstack
+   937 ;; Tracked objects:
+   938 ;;		On entry : 0/0
+   939 ;;		On exit  : 0/0
+   940 ;;		Unchanged: 0/0
+   941 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   942 ;;      Params:         0       0       0       0       0
+   943 ;;      Locals:         0       0       0       0       0
+   944 ;;      Temps:          2       0       0       0       0
+   945 ;;      Totals:         2       0       0       0       0
+   946 ;;Total ram usage:        2 bytes
+   947 ;; Hardware stack levels used:    1
+   948 ;; Hardware stack levels required when called:    1
+   949 ;; This function calls:
+   950 ;;		_clcd_write
+   951 ;; This function is called by:
+   952 ;;		_init_clcd
+   953 ;; This function uses a non-reentrant model
+   954 ;;
+   955                           
+   956                           
+   957                           ;psect for function _init_display_controller
+   958  06E9                     _init_display_controller:	
+   959  06E9                     l758:	
+   960                           ;incstack = 0
+   961                           ; Regs used in _init_display_controller: [wreg+status,2+status,0+pclath+cstack]
+   962                           
+   963                           
+   964                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 19:     _delay(
+      +                          (unsigned long)((30)*(20000000/4000.0)));
+   965  06E9  30C3               	movlw	195
+   966  06EA  00F5               	movwf	??_init_display_controller+1
+   967  06EB  30CD               	movlw	205
+   968  06EC  00F4               	movwf	??_init_display_controller
+   969  06ED                     u217:	
+   970  06ED  0BF4               	decfsz	??_init_display_controller,f
+   971  06EE  2EED               	goto	u217
+   972  06EF  0BF5               	decfsz	??_init_display_controller+1,f
+   973  06F0  2EED               	goto	u217
+   974  06F1                     l760:	
+   975                           
+   976                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 22:     clcd_wr
+      +                          ite(0x33, 0);
+   977  06F1  01F0               	clrf	clcd_write@mode
+   978  06F2  3033               	movlw	51
+   979  06F3  120A  118A  266C  120A  118A  	fcall	_clcd_write
+   980  06F8                     l762:	
+   981                           
+   982                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 23:     _delay(
+      +                          (unsigned long)((4100)*(20000000/4000000.0)));
+   983  06F8  301B               	movlw	27
+   984  06F9  00F5               	movwf	??_init_display_controller+1
+   985  06FA  309E               	movlw	158
+   986  06FB  00F4               	movwf	??_init_display_controller
+   987  06FC                     u227:	
+   988  06FC  0BF4               	decfsz	??_init_display_controller,f
+   989  06FD  2EFC               	goto	u227
+   990  06FE  0BF5               	decfsz	??_init_display_controller+1,f
+   991  06FF  2EFC               	goto	u227
+   992  0700  0000               	nop
+   993                           
+   994                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 24:     clcd_wr
+      +                          ite(0x33, 0);
+   995  0701  01F0               	clrf	clcd_write@mode
+   996  0702  3033               	movlw	51
+   997  0703  120A  118A  266C  120A  118A  	fcall	_clcd_write
+   998  0708                     l764:	
+   999                           
+  1000                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 25:     _delay(
+      +                          (unsigned long)((100)*(20000000/4000000.0)));
+  1001  0708  30A6               	movlw	166
+  1002  0709  00F4               	movwf	??_init_display_controller
+  1003  070A                     u237:	
+  1004  070A  0BF4               	decfsz	??_init_display_controller,f
+  1005  070B  2F0A               	goto	u237
+  1006  070C  0000               	nop
+  1007  070D                     l766:	
+  1008                           
+  1009                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 26:     clcd_wr
+      +                          ite(0x33, 0);
+  1010  070D  01F0               	clrf	clcd_write@mode
+  1011  070E  3033               	movlw	51
+  1012  070F  120A  118A  266C  120A  118A  	fcall	_clcd_write
+  1013  0714                     l768:	
+  1014                           
+  1015                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 27:     _delay(
+      +                          (unsigned long)((1)*(20000000/4000000.0)));
+  1016  0714  2F15               	nop2	;2 cycle nop
+  1017  0715  2F16               	nop2	;2 cycle nop
+  1018  0716  0000               	nop
+  1019  0717                     l770:	
+  1020                           
+  1021                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 29:     clcd_wr
+      +                          ite(0x38, 0);
+  1022  0717  01F0               	clrf	clcd_write@mode
+  1023  0718  3038               	movlw	56
+  1024  0719  120A  118A  266C  120A  118A  	fcall	_clcd_write
+  1025  071E                     l772:	
+  1026                           
+  1027                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 30:     _delay(
+      +                          (unsigned long)((100)*(20000000/4000000.0)));
+  1028  071E  30A6               	movlw	166
+  1029  071F  00F4               	movwf	??_init_display_controller
+  1030  0720                     u247:	
+  1031  0720  0BF4               	decfsz	??_init_display_controller,f
+  1032  0721  2F20               	goto	u247
+  1033  0722  0000               	nop
+  1034                           
+  1035                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 31:     clcd_wr
+      +                          ite(0x01, 0);
+  1036  0723  01F0               	clrf	clcd_write@mode
+  1037  0724  3001               	movlw	1
+  1038  0725  120A  118A  266C  120A  118A  	fcall	_clcd_write
+  1039  072A                     l774:	
+  1040                           
+  1041                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 32:     _delay(
+      +                          (unsigned long)((500)*(20000000/4000000.0)));
+  1042  072A  3004               	movlw	4
+  1043  072B  00F5               	movwf	??_init_display_controller+1
+  1044  072C  303D               	movlw	61
+  1045  072D  00F4               	movwf	??_init_display_controller
+  1046  072E                     u257:	
+  1047  072E  0BF4               	decfsz	??_init_display_controller,f
+  1048  072F  2F2E               	goto	u257
+  1049  0730  0BF5               	decfsz	??_init_display_controller+1,f
+  1050  0731  2F2E               	goto	u257
+  1051  0732  2F33               	nop2
+  1052  0733                     l776:	
+  1053                           
+  1054                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 33:     clcd_wr
+      +                          ite(0x0C, 0);
+  1055  0733  01F0               	clrf	clcd_write@mode
+  1056  0734  300C               	movlw	12
+  1057  0735  120A  118A  266C  120A  118A  	fcall	_clcd_write
+  1058                           
+  1059                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 34:     _delay(
+      +                          (unsigned long)((100)*(20000000/4000000.0)));
+  1060  073A  30A6               	movlw	166
+  1061  073B  00F4               	movwf	??_init_display_controller
+  1062  073C                     u267:	
+  1063  073C  0BF4               	decfsz	??_init_display_controller,f
+  1064  073D  2F3C               	goto	u267
+  1065  073E  0000               	nop
+  1066  073F                     l20:	
+  1067  073F  0008               	return
+  1068  0740                     __end_of_init_display_controller:	
+  1069                           
+  1070                           	psect	text5
+  1071  06BA                     __ptext5:	
+  1072 ;; *************** function _clcd_print *****************
+  1073 ;; Defined at:
+  1074 ;;		line 55 in file "/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c"
+  1075 ;; Parameters:    Size  Location     Type
+  1076 ;;  str             2    4[COMMON] PTR const unsigned char 
+  1077 ;;		 -> STR_2(7), STR_1(17), main@data(11), 
+  1078 ;;  addr            1    6[COMMON] unsigned char 
+  1079 ;; Auto vars:     Size  Location     Type
+  1080 ;;		None
+  1081 ;; Return value:  Size  Location     Type
+  1082 ;;                  1    wreg      void 
+  1083 ;; Registers used:
+  1084 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1085 ;; Tracked objects:
+  1086 ;;		On entry : 0/0
+  1087 ;;		On exit  : 0/0
+  1088 ;;		Unchanged: 0/0
+  1089 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1090 ;;      Params:         3       0       0       0       0
+  1091 ;;      Locals:         0       0       0       0       0
+  1092 ;;      Temps:          0       0       0       0       0
+  1093 ;;      Totals:         3       0       0       0       0
+  1094 ;;Total ram usage:        3 bytes
+  1095 ;; Hardware stack levels used:    1
+  1096 ;; Hardware stack levels required when called:    1
+  1097 ;; This function calls:
+  1098 ;;		_clcd_write
+  1099 ;; This function is called by:
+  1100 ;;		_main
+  1101 ;; This function uses a non-reentrant model
+  1102 ;;
+  1103                           
+  1104                           
+  1105                           ;psect for function _clcd_print
+  1106  06BA                     _clcd_print:	
+  1107  06BA                     l786:	
+  1108                           ;incstack = 0
+  1109                           ; Regs used in _clcd_print: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  1110                           
+  1111                           
+  1112                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 55: void clcd_p
+      +                          rint(const char *str, unsigned char addr);/../home/ubuntu/MPLABXProjects/Assignments/A-1
+      +                          9-DownConverter.X/clcd.c: 56: {;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConv
+      +                          erter.X/clcd.c: 57:     clcd_write(addr, 0);
+  1113  06BA  01F0               	clrf	clcd_write@mode
+  1114  06BB  0876               	movf	clcd_print@addr,w
+  1115  06BC  120A  118A  266C  120A  118A  	fcall	_clcd_write
+  1116                           
+  1117                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 59:     while (
+      +                          *str != '\0')
+  1118  06C1  2ED8               	goto	l792
+  1119  06C2                     l788:	
+  1120                           
+  1121                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 60:     {;/../h
+      +                          ome/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 61:         clcd_writ
+      +                          e(*str, 1);
+  1122  06C2  01F0               	clrf	clcd_write@mode
+  1123  06C3  0AF0               	incf	clcd_write@mode,f
+  1124  06C4  0875               	movf	clcd_print@str+1,w
+  1125  06C5  00FF               	movwf	btemp+1
+  1126  06C6  0874               	movf	clcd_print@str,w
+  1127  06C7  0084               	movwf	4
+  1128  06C8  120A  118A  2003  120A  118A  	fcall	stringtab
+  1129  06CD  120A  118A  266C  120A  118A  	fcall	_clcd_write
+  1130  06D2                     l790:	
+  1131                           
+  1132                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 62:         str
+      +                          ++;
+  1133  06D2  3001               	movlw	1
+  1134  06D3  07F4               	addwf	clcd_print@str,f
+  1135  06D4  1803               	skipnc
+  1136  06D5  0AF5               	incf	clcd_print@str+1,f
+  1137  06D6  3000               	movlw	0
+  1138  06D7  07F5               	addwf	clcd_print@str+1,f
+  1139  06D8                     l792:	
+  1140                           
+  1141                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 59:     while (
+      +                          *str != '\0')
+  1142  06D8  0875               	movf	clcd_print@str+1,w
+  1143  06D9  1283               	bcf	3,5	;RP0=0, select bank0
+  1144  06DA  1303               	bcf	3,6	;RP1=0, select bank0
+  1145  06DB  00FF               	movwf	btemp+1
+  1146  06DC  0874               	movf	clcd_print@str,w
+  1147  06DD  0084               	movwf	4
+  1148  06DE  120A  118A  2003  120A  118A  	fcall	stringtab
+  1149  06E3  3A00               	xorlw	0
+  1150  06E4  1D03               	skipz
+  1151  06E5  2EE7               	goto	u131
+  1152  06E6  2EE8               	goto	u130
+  1153  06E7                     u131:	
+  1154  06E7  2EC2               	goto	l788
+  1155  06E8                     u130:	
+  1156  06E8                     l29:	
+  1157  06E8  0008               	return
+  1158  06E9                     __end_of_clcd_print:	
+  1159                           
+  1160                           	psect	text6
+  1161  066C                     __ptext6:	
+  1162 ;; *************** function _clcd_write *****************
+  1163 ;; Defined at:
+  1164 ;;		line 4 in file "/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c"
+  1165 ;; Parameters:    Size  Location     Type
+  1166 ;;  byte            1    wreg     unsigned char 
+  1167 ;;  mode            1    0[COMMON] unsigned char 
+  1168 ;; Auto vars:     Size  Location     Type
+  1169 ;;  byte            1    3[COMMON] unsigned char 
+  1170 ;; Return value:  Size  Location     Type
+  1171 ;;                  1    wreg      void 
+  1172 ;; Registers used:
+  1173 ;;		wreg
+  1174 ;; Tracked objects:
+  1175 ;;		On entry : 0/0
+  1176 ;;		On exit  : 0/0
+  1177 ;;		Unchanged: 0/0
+  1178 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1179 ;;      Params:         1       0       0       0       0
+  1180 ;;      Locals:         1       0       0       0       0
+  1181 ;;      Temps:          2       0       0       0       0
+  1182 ;;      Totals:         4       0       0       0       0
+  1183 ;;Total ram usage:        4 bytes
+  1184 ;; Hardware stack levels used:    1
+  1185 ;; This function calls:
+  1186 ;;		Nothing
+  1187 ;; This function is called by:
+  1188 ;;		_init_display_controller
+  1189 ;;		_clcd_print
+  1190 ;; This function uses a non-reentrant model
+  1191 ;;
+  1192                           
+  1193                           
+  1194                           ;psect for function _clcd_write
+  1195  066C                     _clcd_write:	
+  1196                           
+  1197                           ;incstack = 0
+  1198                           ; Regs used in _clcd_write: [wreg]
+  1199                           ;clcd_write@byte stored from wreg
+  1200  066C  00F3               	movwf	clcd_write@byte
+  1201  066D                     l750:	
+  1202                           
+  1203                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 4: static void 
+      +                          clcd_write(unsigned char byte, unsigned char mode);/../home/ubuntu/MPLABXProjects/Assign
+      +                          ments/A-19-DownConverter.X/clcd.c: 5: {;/../home/ubuntu/MPLABXProjects/Assignments/A-19-
+      +                          DownConverter.X/clcd.c: 6:     RE2 = mode;
+  1204  066D  1870               	btfsc	clcd_write@mode,0
+  1205  066E  2E70               	goto	u111
+  1206  066F  2E74               	goto	u110
+  1207  0670                     u111:	
+  1208  0670  1283               	bcf	3,5	;RP0=0, select bank0
+  1209  0671  1303               	bcf	3,6	;RP1=0, select bank0
+  1210  0672  1509               	bsf	9,2	;volatile
+  1211  0673  2E77               	goto	u124
+  1212  0674                     u110:	
+  1213  0674  1283               	bcf	3,5	;RP0=0, select bank0
+  1214  0675  1303               	bcf	3,6	;RP1=0, select bank0
+  1215  0676  1109               	bcf	9,2	;volatile
+  1216  0677                     u124:	
+  1217  0677                     l752:	
+  1218                           
+  1219                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 7:     PORTD = 
+      +                          byte;
+  1220  0677  0873               	movf	clcd_write@byte,w
+  1221  0678  0088               	movwf	8	;volatile
+  1222  0679                     l754:	
+  1223                           
+  1224                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 9:     RE1 = 1;
+  1225  0679  1489               	bsf	9,1	;volatile
+  1226                           
+  1227                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 10:     _delay(
+      +                          (unsigned long)((100)*(20000000/4000000.0)));
+  1228  067A  30A6               	movlw	166
+  1229  067B  00F1               	movwf	??_clcd_write
+  1230  067C                     u277:	
+  1231  067C  0BF1               	decfsz	??_clcd_write,f
+  1232  067D  2E7C               	goto	u277
+  1233  067E  0000               	nop
+  1234  067F                     l756:	
+  1235                           
+  1236                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 11:     RE1 = 0
+      +                          ;
+  1237  067F  1283               	bcf	3,5	;RP0=0, select bank0
+  1238  0680  1303               	bcf	3,6	;RP1=0, select bank0
+  1239  0681  1089               	bcf	9,1	;volatile
+  1240                           
+  1241                           ;/../home/ubuntu/MPLABXProjects/Assignments/A-19-DownConverter.X/clcd.c: 13:     _delay(
+      +                          (unsigned long)((4100)*(20000000/4000000.0)));
+  1242  0682  301B               	movlw	27
+  1243  0683  00F2               	movwf	??_clcd_write+1
+  1244  0684  309E               	movlw	158
+  1245  0685  00F1               	movwf	??_clcd_write
+  1246  0686                     u287:	
+  1247  0686  0BF1               	decfsz	??_clcd_write,f
+  1248  0687  2E86               	goto	u287
+  1249  0688  0BF2               	decfsz	??_clcd_write+1,f
+  1250  0689  2E86               	goto	u287
+  1251  068A  0000               	nop
+  1252  068B                     l17:	
+  1253  068B  0008               	return
+  1254  068C                     __end_of_clcd_write:	
+  1255  007E                     btemp	set	126	;btemp
+  1256  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     35
+    Constant    0
+    Data        22
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     11      11
+    BANK0            80     26      48
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    strcmp@s2	PTR const unsigned char  size(1) Largest target is 11
+		 -> STR_3(CODE[11]), 
+
+    strcmp@s1	PTR const unsigned char  size(1) Largest target is 11
+		 -> main@data(BANK0[11]), 
+
+    clcd_print@str	PTR const unsigned char  size(2) Largest target is 17
+		 -> STR_2(CODE[7]), STR_1(CODE[17]), main@data(BANK0[11]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_clcd_print
+    _main->_strcmp
+    _init_clcd->_init_display_controller
+    _init_display_controller->_clcd_write
+    _clcd_print->_clcd_write
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                30    30      0    2459
+                                              7 COMMON     4     4      0
+                                              0 BANK0     26    26      0
+                         _clcd_print
+                        _init_config
+                             _strcmp
+ ---------------------------------------------------------------------------------
+ (2) _strcmp                                               7     5      2     200
+                                              0 COMMON     7     5      2
+ ---------------------------------------------------------------------------------
+ (1) _init_config                                          0     0      0     652
+                          _init_clcd
+ ---------------------------------------------------------------------------------
+ (2) _init_clcd                                            0     0      0     652
+            _init_display_controller
+ ---------------------------------------------------------------------------------
+ (3) _init_display_controller                              2     2      0     652
+                                              4 COMMON     2     2      0
+                         _clcd_write
+ ---------------------------------------------------------------------------------
+ (1) _clcd_print                                           3     0      3    1327
+                                              4 COMMON     3     0      3
+                         _clcd_write
+ ---------------------------------------------------------------------------------
+ (4) _clcd_write                                           4     3      1     652
+                                              0 COMMON     4     3      1
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _clcd_print
+     _clcd_write
+   _init_config
+     _init_clcd
+       _init_display_controller
+         _clcd_write
+   _strcmp
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               60      0       0       9        0.0%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50     1A      30       5       60.0%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      B       B       1       78.6%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      3B      12        0.0%
+ABS                  0      0      3B       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.10 build 88905656 
+Symbol Table                                                                                   Thu Jun 11 17:26:22 2020
+
+                               pc 0002                    clcd_print@addr 0076  __size_of_init_display_controller 0057  
+                              l20 073F                                l23 0642                                l17 068B  
+                              l52 07E3                                l29 06E8                                l38 0637  
+                              fsr 0004                               l800 0692                               l802 0696  
+                             l810 0740                               l804 06AD                               l820 077C  
+                             l812 0745                               l750 066D                               l806 06B4  
+                             l830 079A                               l822 0789                               l814 0745  
+                             l752 0677                               l760 06F1                               l592 06B9  
+                             l840 07D3                               l832 07A6                               l824 0796  
+                             l816 075A                               l754 0679                               l770 0717  
+                             l762 06F8                               l842 07E6                               l834 07B3  
+                             l818 076F                               l756 067F                               l772 071E  
+                             l764 0708                               l780 063B                               l836 07B9  
+                             l790 06D2                               l774 072A                               l766 070D  
+                             l758 06E9                               l782 063C                               l838 07C6  
+                             l792 06D8                               l776 0733                               l768 0714  
+                             l784 063D                               l786 06BA                               l778 0638  
+                             l794 0632                               l788 06C2                               l796 068D  
+                             l798 068E                               _RE1 0049                               _RE2 004A  
+                             u110 0674                               u111 0670                               u200 07E3  
+                             u201 07E2                               u130 06E8                               u131 06E7  
+                             u124 0677                               u140 06AD                               u141 06AC  
+                             u150 06B4                               u151 06B3                               u160 074D  
+                             u217 06ED                               u170 0762                               u227 06FC  
+                             u180 07A6                               u237 070A                               u181 07A5  
+                             u190 07C6                               u247 0720                               u191 07C5  
+                             u257 072E                               u267 073C                               u195 07C2  
+                             u277 067C                               u287 0686                               fsr0 0004  
+                             indf 0000                              STR_1 0013                              STR_2 002F  
+                            STR_3 0024                              _main 0740                              btemp 007E  
+                            start 0000                    clcd_write@byte 0073                    clcd_write@mode 0070  
+                           ?_main 0070                     __CFG_WDTE$OFF 0000                      ?_init_config 0070  
+                           _PORTD 0008                             _TRISD 0088                             main@i 0038  
+                           pclath 000A                             status 0003                             wtemp0 007E  
+                 __initialization 07EE                      __end_of_main 07EE                            ??_main 0077  
+                          _TRISE1 0449                            _TRISE2 044A           _init_display_controller 06E9  
+                          _strcmp 068C           __end_of__initialization 07FC                    __pcstackCOMMON 0070  
+                    __pidataBANK0 0656              __size_of_init_config 0006                __size_of_init_clcd 000B  
+       ??_init_display_controller 0074                        _clcd_print 06BA                        _clcd_write 066C  
+                      __pmaintext 0740                           ?_strcmp 0070                        __stringtab 0003  
+                         __ptext1 068C                           __ptext2 0632                           __ptext3 0638  
+                         __ptext4 06E9                           __ptext5 06BA                           __ptext6 066C  
+                 __size_of_strcmp 002E   __end_of_init_display_controller 0740                 __end_of_init_clcd 0643  
+            end_of_initialization 07FC                       ?_clcd_print 0074                       ?_clcd_write 0070  
+                         strcmp@r 0075                     clcd_print@str 0074                    __end_of_strcmp 06BA  
+             start_initialization 07EE               __size_of_clcd_print 002F               __size_of_clcd_write 0020  
+                      init_fetch0 0643                       __pdataBANK0 003A                          ??_strcmp 0072  
+                   ??_init_config 0076                         ___latbits 0002                     __pcstackBANK0 0020  
+                       __pstrings 0003                         _init_clcd 0638               __end_of_init_config 0638  
+        ?_init_display_controller 0070                      ??_clcd_print 0077                      ??_clcd_write 0071  
+                     __stringbase 0012                         main@data1 0020                __end_of_clcd_print 06E9  
+              __end_of_clcd_write 068C                        ?_init_clcd 0070                __end_of__stringtab 0013  
+                     _init_config 0632                     __size_of_main 00AE                          main@F945 0045  
+                        main@F947 003A                          main@data 002D                          init_ram0 0647  
+                     ??_init_clcd 0076                         stringcode 000D                          strcmp@s1 0076  
+                        strcmp@s2 0070                          stringdir 000D                          stringtab 0003  
