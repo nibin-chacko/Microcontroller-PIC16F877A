@@ -1,0 +1,103 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 /opt/microchip/xc8/v2.10/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.10/pic/sources/c90/common/strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"4 /opt/microchip/xc8/v2.10/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"4 /home/ubuntu/MPLABXProjects/Assignments/21_NameScrolling.X/clcd.c
+[v _clcd_write clcd_write `(v  1 s 1 clcd_write ]
+"16
+[v _init_display_controller init_display_controller `(v  1 s 1 init_display_controller ]
+"37
+[v _init_clcd init_clcd `(v  1 e 1 0 ]
+"55
+[v _clcd_print clcd_print `(v  1 e 1 0 ]
+"13 /home/ubuntu/MPLABXProjects/Assignments/21_NameScrolling.X/main.c
+[v _init_config init_config `(v  1 s 1 init_config ]
+"17
+[v _main main `(v  1 e 1 0 ]
+"340 /opt/microchip/xc8/v2.10/pic/include/pic16f877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2776
+[v _RE1 RE1 `VEb  1 e 0 @73 ]
+"2779
+[v _RE2 RE2 `VEb  1 e 0 @74 ]
+"3010
+[v _TRISE1 TRISE1 `VEb  1 e 0 @1097 ]
+"3013
+[v _TRISE2 TRISE2 `VEb  1 e 0 @1098 ]
+"17 /home/ubuntu/MPLABXProjects/Assignments/21_NameScrolling.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"33
+[v main@wait wait `ul  1 a 4 17 ]
+"19
+[v main@data data `[17]uc  1 a 17 0 ]
+"22
+[v main@i i `i  1 a 2 24 ]
+"21
+[v main@len len `i  1 a 2 22 ]
+"20
+[v main@c c `uc  1 a 1 21 ]
+"18
+[v main@F944 F944 `[17]uc  1 s 17 F944 ]
+"36
+} 0
+"4 /opt/microchip/xc8/v2.10/pic/sources/c90/common/strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+[v strlen@s s `*.4DCuc  1 a 1 wreg ]
+"6
+[v strlen@cp cp `*.4DCuc  1 a 1 4 ]
+"4
+[v strlen@s s `*.4DCuc  1 a 1 wreg ]
+"8
+[v strlen@s s `*.4DCuc  1 a 1 3 ]
+"13
+} 0
+"13 /home/ubuntu/MPLABXProjects/Assignments/21_NameScrolling.X/main.c
+[v _init_config init_config `(v  1 s 1 init_config ]
+{
+"15
+} 0
+"37 /home/ubuntu/MPLABXProjects/Assignments/21_NameScrolling.X/clcd.c
+[v _init_clcd init_clcd `(v  1 e 1 0 ]
+{
+"47
+} 0
+"16
+[v _init_display_controller init_display_controller `(v  1 s 1 init_display_controller ]
+{
+"35
+} 0
+"55
+[v _clcd_print clcd_print `(v  1 e 1 0 ]
+{
+[v clcd_print@str str `*.4DCuc  1 a 1 wreg ]
+[v clcd_print@str str `*.4DCuc  1 a 1 wreg ]
+[v clcd_print@addr addr `uc  1 p 1 4 ]
+"57
+[v clcd_print@str str `*.4DCuc  1 a 1 6 ]
+"65
+} 0
+"4
+[v _clcd_write clcd_write `(v  1 s 1 clcd_write ]
+{
+[v clcd_write@byte byte `uc  1 a 1 wreg ]
+[v clcd_write@byte byte `uc  1 a 1 wreg ]
+[v clcd_write@mode mode `uc  1 p 1 0 ]
+"6
+[v clcd_write@byte byte `uc  1 a 1 3 ]
+"14
+} 0
