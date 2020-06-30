@@ -1,0 +1,80 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 /opt/microchip/xc8/v2.10/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.10/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"3 /home/ubuntu/MPLABXProjects/Assignments/Assignment008.X/adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+"12
+[v _read_adc read_adc `(us  1 e 2 0 ]
+"18 /home/ubuntu/MPLABXProjects/Assignments/Assignment008.X/newmain.c
+[v _software_pwm software_pwm `(v  1 e 1 0 ]
+"69
+[v _init_config init_config `(v  1 s 1 init_config ]
+"76
+[v _main main `(v  1 e 1 0 ]
+"340 /opt/microchip/xc8/v2.10/pic/include/pic16f877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1152
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2222
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2395
+[v _ADFM ADFM `VEb  1 e 0 @1279 ]
+"2404
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"2572
+[v _GO GO `VEb  1 e 0 @250 ]
+"2749
+[v _RD0 RD0 `VEb  1 e 0 @64 ]
+"3070
+[v _nDONE nDONE `VEb  1 e 0 @250 ]
+"76 /home/ubuntu/MPLABXProjects/Assignments/Assignment008.X/newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"77
+[v main@adc_reg_val adc_reg_val `us  1 a 2 6 ]
+"88
+} 0
+"18
+[v _software_pwm software_pwm `(v  1 e 1 0 ]
+{
+"20
+[v software_pwm@duty_cycle duty_cycle `us  1 a 2 4 ]
+"23
+[v software_pwm@value value `us  1 a 2 2 ]
+"18
+[v software_pwm@adc_reg_val adc_reg_val `us  1 p 2 0 ]
+"21
+[v software_pwm@loop_counter loop_counter `us  1 s 2 loop_counter ]
+"22
+[v software_pwm@wait wait `ui  1 s 2 wait ]
+"67
+} 0
+"12 /home/ubuntu/MPLABXProjects/Assignments/Assignment008.X/adc.c
+[v _read_adc read_adc `(us  1 e 2 0 ]
+{
+"14
+[v read_adc@adc_reg_val adc_reg_val `us  1 a 2 2 ]
+"24
+} 0
+"69 /home/ubuntu/MPLABXProjects/Assignments/Assignment008.X/newmain.c
+[v _init_config init_config `(v  1 s 1 init_config ]
+{
+"74
+} 0
+"3 /home/ubuntu/MPLABXProjects/Assignments/Assignment008.X/adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+{
+"10
+} 0
