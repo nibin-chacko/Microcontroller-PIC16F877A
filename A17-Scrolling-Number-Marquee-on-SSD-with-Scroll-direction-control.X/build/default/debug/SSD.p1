@@ -1,0 +1,522 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1499 /opt/microchip/xc8/v2.10/pic/include/pic16f877a.h
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"1325
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1325: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"16 ./main.h
+[; ;./main.h: 16: extern int LEFT,RIGHT,STOP,START;
+[v _LEFT `i ~T0 @X0 0 e ]
+[v _STOP `i ~T0 @X0 0 e ]
+[v _START `i ~T0 @X0 0 e ]
+"12
+[; ;./main.h: 12: extern unsigned int i;
+[v _i `ui ~T0 @X0 0 e ]
+"13
+[; ;./main.h: 13: extern unsigned int j;
+[v _j `ui ~T0 @X0 0 e ]
+"14
+[; ;./main.h: 14: extern unsigned int k;
+[v _k `ui ~T0 @X0 0 e ]
+"15
+[; ;./main.h: 15: extern unsigned int l;
+[v _l `ui ~T0 @X0 0 e ]
+"16
+[; ;./main.h: 16: extern int LEFT,RIGHT,STOP,START;
+[v _RIGHT `i ~T0 @X0 0 e ]
+"11
+[; ;./main.h: 11: extern unsigned int count;
+[v _count `ui ~T0 @X0 0 e ]
+"340 /opt/microchip/xc8/v2.10/pic/include/pic16f877a.h
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"54 /opt/microchip/xc8/v2.10/pic/include/pic16f877a.h
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;/opt/microchip/xc8/v2.10/pic/include/pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"4 SSD.c
+[; ;SSD.c: 4: void init_ssd(void)
+[v _init_ssd `(v ~T0 @X0 1 ef ]
+"5
+[; ;SSD.c: 5: {
+{
+[e :U _init_ssd ]
+[f ]
+"7
+[; ;SSD.c: 7:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"10
+[; ;SSD.c: 10:     TRISA = TRISA & 0xC3;
+[e = _TRISA -> & -> _TRISA `i -> 195 `i `uc ]
+"13
+[; ;SSD.c: 13:     PORTA = PORTA & 0xC3;
+[e = _PORTA -> & -> _PORTA `i -> 195 `i `uc ]
+"15
+[; ;SSD.c: 15: }
+[e :UE 95 ]
+}
+"17
+[; ;SSD.c: 17: void display(unsigned char data[])
+[v _display `(v ~T0 @X0 1 ef1`*uc ]
+"18
+[; ;SSD.c: 18: {
+{
+[e :U _display ]
+"17
+[; ;SSD.c: 17: void display(unsigned char data[])
+[v _data `*uc ~T0 @X0 1 r1 ]
+"18
+[; ;SSD.c: 18: {
+[f ]
+"19
+[; ;SSD.c: 19:     unsigned char digit;
+[v _digit `uc ~T0 @X0 1 a ]
+"20
+[; ;SSD.c: 20:     static unsigned int wait= 0;
+[v F866 `ui ~T0 @X0 1 s wait ]
+[i F866
+-> -> 0 `i `ui
+]
+"21
+[; ;SSD.c: 21:        if(wait == 300)
+[e $ ! == F866 -> -> 300 `i `ui 97  ]
+"22
+[; ;SSD.c: 22:         {
+{
+"23
+[; ;SSD.c: 23:            wait = 0;
+[e = F866 -> -> 0 `i `ui ]
+"24
+[; ;SSD.c: 24:            if((LEFT == 1 && STOP == 0)|| START == 1)
+[e $ ! || && == _LEFT -> 1 `i == _STOP -> 0 `i == _START -> 1 `i 98  ]
+"25
+[; ;SSD.c: 25:            {
+{
+"26
+[; ;SSD.c: 26:            i++;
+[e ++ _i -> -> 1 `i `ui ]
+"27
+[; ;SSD.c: 27:            j++;
+[e ++ _j -> -> 1 `i `ui ]
+"28
+[; ;SSD.c: 28:            k++;
+[e ++ _k -> -> 1 `i `ui ]
+"29
+[; ;SSD.c: 29:            l++;
+[e ++ _l -> -> 1 `i `ui ]
+"30
+[; ;SSD.c: 30:           if(i == 12)
+[e $ ! == _i -> -> 12 `i `ui 99  ]
+"31
+[; ;SSD.c: 31:            {
+{
+"32
+[; ;SSD.c: 32:                i = 0;
+[e = _i -> -> 0 `i `ui ]
+"33
+[; ;SSD.c: 33:            }
+}
+[e :U 99 ]
+"34
+[; ;SSD.c: 34:            if(j == 12)
+[e $ ! == _j -> -> 12 `i `ui 100  ]
+"35
+[; ;SSD.c: 35:            {
+{
+"36
+[; ;SSD.c: 36:                j = 0;
+[e = _j -> -> 0 `i `ui ]
+"37
+[; ;SSD.c: 37:            }
+}
+[e :U 100 ]
+"38
+[; ;SSD.c: 38:            if(k == 12)
+[e $ ! == _k -> -> 12 `i `ui 101  ]
+"39
+[; ;SSD.c: 39:            {
+{
+"40
+[; ;SSD.c: 40:                k = 0;
+[e = _k -> -> 0 `i `ui ]
+"41
+[; ;SSD.c: 41:            }
+}
+[e :U 101 ]
+"42
+[; ;SSD.c: 42:            if(l == 12)
+[e $ ! == _l -> -> 12 `i `ui 102  ]
+"43
+[; ;SSD.c: 43:            {
+{
+"44
+[; ;SSD.c: 44:                l = 0;
+[e = _l -> -> 0 `i `ui ]
+"45
+[; ;SSD.c: 45:            }
+}
+[e :U 102 ]
+"46
+[; ;SSD.c: 46:            }
+}
+[e $U 103  ]
+"47
+[; ;SSD.c: 47:            else if((RIGHT == 1 & STOP == 0) || START == 2)
+[e :U 98 ]
+[e $ ! || & == _RIGHT -> 1 `i == _STOP -> 0 `i == _START -> 2 `i 104  ]
+"48
+[; ;SSD.c: 48:            {
+{
+"49
+[; ;SSD.c: 49:            if(i == 0)
+[e $ ! == _i -> -> 0 `i `ui 105  ]
+"50
+[; ;SSD.c: 50:            {
+{
+"51
+[; ;SSD.c: 51:                i = 12;
+[e = _i -> -> 12 `i `ui ]
+"52
+[; ;SSD.c: 52:            }
+}
+[e :U 105 ]
+"53
+[; ;SSD.c: 53:            if(j == 0)
+[e $ ! == _j -> -> 0 `i `ui 106  ]
+"54
+[; ;SSD.c: 54:            {
+{
+"55
+[; ;SSD.c: 55:                j = 12;
+[e = _j -> -> 12 `i `ui ]
+"56
+[; ;SSD.c: 56:            }
+}
+[e :U 106 ]
+"57
+[; ;SSD.c: 57:            if(k == 0)
+[e $ ! == _k -> -> 0 `i `ui 107  ]
+"58
+[; ;SSD.c: 58:            {
+{
+"59
+[; ;SSD.c: 59:                k = 12;
+[e = _k -> -> 12 `i `ui ]
+"60
+[; ;SSD.c: 60:            }
+}
+[e :U 107 ]
+"61
+[; ;SSD.c: 61:            if(l == 0)
+[e $ ! == _l -> -> 0 `i `ui 108  ]
+"62
+[; ;SSD.c: 62:            {
+{
+"63
+[; ;SSD.c: 63:                l = 12;
+[e = _l -> -> 12 `i `ui ]
+"64
+[; ;SSD.c: 64:            }
+}
+[e :U 108 ]
+"65
+[; ;SSD.c: 65:                i--;
+[e -- _i -> -> 1 `i `ui ]
+"66
+[; ;SSD.c: 66:                j--;
+[e -- _j -> -> 1 `i `ui ]
+"67
+[; ;SSD.c: 67:                k--;
+[e -- _k -> -> 1 `i `ui ]
+"68
+[; ;SSD.c: 68:                l--;
+[e -- _l -> -> 1 `i `ui ]
+"69
+[; ;SSD.c: 69:            }
+}
+[e :U 104 ]
+[e :U 103 ]
+"71
+[; ;SSD.c: 71:           count++;
+[e ++ _count -> -> 1 `i `ui ]
+"72
+[; ;SSD.c: 72:         }
+}
+[e :U 97 ]
+"73
+[; ;SSD.c: 73:          wait++;
+[e ++ F866 -> -> 1 `i `ui ]
+"74
+[; ;SSD.c: 74:          if(LEFT == 1 || STOP == 1 || START == 1)
+[e $ ! || || == _LEFT -> 1 `i == _STOP -> 1 `i == _START -> 1 `i 109  ]
+"75
+[; ;SSD.c: 75:          {
+{
+"76
+[; ;SSD.c: 76:             for(digit = 0;digit < 4;digit++)
+{
+[e = _digit -> -> 0 `i `uc ]
+[e $ < -> _digit `i -> 4 `i 110  ]
+[e $U 111  ]
+[e :U 110 ]
+"77
+[; ;SSD.c: 77:             {
+{
+"78
+[; ;SSD.c: 78:                 PORTD =data[digit];
+[e = _PORTD *U + _data * -> _digit `ux -> -> # *U _data `ui `ux ]
+"79
+[; ;SSD.c: 79:                 PORTA = (PORTA & 0xC3) | (0x20 >> digit);
+[e = _PORTA -> | & -> _PORTA `i -> 195 `i >> -> 32 `i -> _digit `i `uc ]
+"80
+[; ;SSD.c: 80:                 for(unsigned int i = 400;i--;);
+{
+[v _i `ui ~T0 @X0 1 a ]
+[e = _i -> -> 400 `i `ui ]
+[e $U 116  ]
+[e :U 113 ]
+[e :U 116 ]
+[e $ != -- _i -> -> 1 `i `ui -> -> 0 `i `ui 113  ]
+[e :U 114 ]
+}
+"81
+[; ;SSD.c: 81:             }
+}
+[e ++ _digit -> -> 1 `i `uc ]
+[e $ < -> _digit `i -> 4 `i 110  ]
+[e :U 111 ]
+}
+"82
+[; ;SSD.c: 82:          }
+}
+[e $U 117  ]
+"83
+[; ;SSD.c: 83:          else if(RIGHT == 1 || STOP == 1 || START == 0)
+[e :U 109 ]
+[e $ ! || || == _RIGHT -> 1 `i == _STOP -> 1 `i == _START -> 0 `i 118  ]
+"84
+[; ;SSD.c: 84:          {
+{
+"85
+[; ;SSD.c: 85:             for(digit = 0;digit < 4;digit++)
+{
+[e = _digit -> -> 0 `i `uc ]
+[e $ < -> _digit `i -> 4 `i 119  ]
+[e $U 120  ]
+[e :U 119 ]
+"86
+[; ;SSD.c: 86:             {
+{
+"87
+[; ;SSD.c: 87:                 PORTD =data[digit];
+[e = _PORTD *U + _data * -> _digit `ux -> -> # *U _data `ui `ux ]
+"88
+[; ;SSD.c: 88:                 PORTA = (PORTA & 0xC3) | (0x20 >> digit);
+[e = _PORTA -> | & -> _PORTA `i -> 195 `i >> -> 32 `i -> _digit `i `uc ]
+"89
+[; ;SSD.c: 89:                 for(unsigned int i = 400;i--;);
+{
+[v _i `ui ~T0 @X0 1 a ]
+[e = _i -> -> 400 `i `ui ]
+[e $U 125  ]
+[e :U 122 ]
+[e :U 125 ]
+[e $ != -- _i -> -> 1 `i `ui -> -> 0 `i `ui 122  ]
+[e :U 123 ]
+}
+"91
+[; ;SSD.c: 91:             }
+}
+[e ++ _digit -> -> 1 `i `uc ]
+[e $ < -> _digit `i -> 4 `i 119  ]
+[e :U 120 ]
+}
+"92
+[; ;SSD.c: 92:          }
+}
+[e :U 118 ]
+[e :U 117 ]
+"93
+[; ;SSD.c: 93: }
+[e :UE 96 ]
+}

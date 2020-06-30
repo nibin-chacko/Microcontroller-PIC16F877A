@@ -1,0 +1,445 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+cinit CODE 0 7E0 7E0 20 2
+text1 CODE 0 584 584 2A 2
+text2 CODE 0 542 542 B 2
+text3 CODE 0 54D 54D C 2
+text4 CODE 0 53C 53C 6 2
+text5 CODE 0 66C 66C 174 2
+idataCOMMON CODE 0 53B 53B 1 2
+maintext CODE 0 5AE 5AE BE 2
+cstackCOMMON COMMON 1 70 70 D 1
+cstackBANK0 BANK0 1 38 38 17 1
+inittext CODE 0 559 559 13 2
+bssBANK0 BANK0 1 4F 4F 8 1
+idataBANK0 CODE 0 56C 56C 18 2
+dataBANK0 BANK0 1 20 20 18 1
+dataCOMMON COMMON 1 7D 7D 1 1
+$/tmp/xcX2F3YBt.o
+end_init CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 57-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 57-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-53A 2
+CONST 800-1FFF 2
+ENTRY 3-53A 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-53A 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 3-53A 2
+STRCODE 800-1FFF 2
+STRING 3-53A 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+7E0 cinit CODE >667:/tmp/xcXB98vi7.s
+7E0 cinit CODE >670:/tmp/xcXB98vi7.s
+7E0 cinit CODE >770:/tmp/xcXB98vi7.s
+7E1 cinit CODE >771:/tmp/xcXB98vi7.s
+7E2 cinit CODE >772:/tmp/xcXB98vi7.s
+7E3 cinit CODE >773:/tmp/xcXB98vi7.s
+7E4 cinit CODE >774:/tmp/xcXB98vi7.s
+7E5 cinit CODE >775:/tmp/xcXB98vi7.s
+7E6 cinit CODE >776:/tmp/xcXB98vi7.s
+7E7 cinit CODE >777:/tmp/xcXB98vi7.s
+7E8 cinit CODE >778:/tmp/xcXB98vi7.s
+7E9 cinit CODE >779:/tmp/xcXB98vi7.s
+7EE cinit CODE >783:/tmp/xcXB98vi7.s
+7F3 cinit CODE >784:/tmp/xcXB98vi7.s
+7F4 cinit CODE >788:/tmp/xcXB98vi7.s
+7F5 cinit CODE >789:/tmp/xcXB98vi7.s
+7F6 cinit CODE >790:/tmp/xcXB98vi7.s
+7F7 cinit CODE >791:/tmp/xcXB98vi7.s
+7F8 cinit CODE >792:/tmp/xcXB98vi7.s
+7F9 cinit CODE >793:/tmp/xcXB98vi7.s
+7FA cinit CODE >794:/tmp/xcXB98vi7.s
+7FB cinit CODE >795:/tmp/xcXB98vi7.s
+7FC cinit CODE >801:/tmp/xcXB98vi7.s
+7FC cinit CODE >803:/tmp/xcXB98vi7.s
+7FD cinit CODE >804:/tmp/xcXB98vi7.s
+66C text5 CODE >17:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+66D text5 CODE >21:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+678 text5 CODE >23:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+67A text5 CODE >24:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+68C text5 CODE >26:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+692 text5 CODE >27:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+698 text5 CODE >28:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+69E text5 CODE >29:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6A4 text5 CODE >30:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6A8 text5 CODE >32:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6AC text5 CODE >34:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6B0 text5 CODE >36:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6B4 text5 CODE >38:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6B8 text5 CODE >40:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6BC text5 CODE >42:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6C0 text5 CODE >44:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6C5 text5 CODE >47:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6D8 text5 CODE >50:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6DE text5 CODE >51:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6E4 text5 CODE >52:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6EA text5 CODE >53:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6F0 text5 CODE >54:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+6FD text5 CODE >56:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+701 text5 CODE >58:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+710 text5 CODE >60:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+714 text5 CODE >62:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+723 text5 CODE >64:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+727 text5 CODE >66:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+736 text5 CODE >68:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+73A text5 CODE >72:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+742 text5 CODE >74:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+748 text5 CODE >77:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+75A text5 CODE >79:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+75B text5 CODE >81:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+765 text5 CODE >82:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+777 text5 CODE >83:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+789 text5 CODE >84:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+794 text5 CODE >86:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+7A6 text5 CODE >88:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+7A7 text5 CODE >90:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+7B1 text5 CODE >91:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+7C3 text5 CODE >92:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+7D5 text5 CODE >94:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+7DF text5 CODE >96:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+53C text4 CODE >5:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+53C text4 CODE >8:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+541 text4 CODE >9:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+54D text3 CODE >4:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+54D text3 CODE >7:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+550 text3 CODE >10:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+553 text3 CODE >13:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+558 text3 CODE >15:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/SSD.c
+542 text2 CODE >17:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+542 text2 CODE >19:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+547 text2 CODE >21:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+54C text2 CODE >22:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+584 text1 CODE >11:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+585 text1 CODE >14:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+58A text1 CODE >16:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+58F text1 CODE >20:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+59F text1 CODE >22:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+5A1 text1 CODE >26:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+5AA text1 CODE >28:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+5AC text1 CODE >33:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+5AD text1 CODE >34:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/Digital_keypad.c
+5AE maintext CODE >24:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5AE maintext CODE >25:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5B2 maintext CODE >28:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5C7 maintext CODE >29:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5CB maintext CODE >30:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5CB maintext CODE >31:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5D0 maintext CODE >34:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5DB maintext CODE >35:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5E1 maintext CODE >37:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5E5 maintext CODE >38:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5E7 maintext CODE >39:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5E9 maintext CODE >40:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5EB maintext CODE >41:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5ED maintext CODE >42:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5EE maintext CODE >43:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5F4 maintext CODE >45:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5F6 maintext CODE >46:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+5FB maintext CODE >52:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+601 maintext CODE >54:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+607 maintext CODE >55:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+60B maintext CODE >56:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+60D maintext CODE >57:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+614 maintext CODE >59:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+61A maintext CODE >61:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+61C maintext CODE >62:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+61E maintext CODE >63:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+61F maintext CODE >64:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+625 maintext CODE >66:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+629 maintext CODE >67:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+62C maintext CODE >71:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+62C maintext CODE >72:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+636 maintext CODE >74:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+63E maintext CODE >75:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+645 maintext CODE >76:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+64C maintext CODE >77:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+653 maintext CODE >78:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+657 maintext CODE >81:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+65D maintext CODE >82:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+666 maintext CODE >84:/home/ubuntu/MPLABXProjects/Assignments/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X/main.c
+559 inittext CODE >744:/tmp/xcXB98vi7.s
+559 inittext CODE >745:/tmp/xcXB98vi7.s
+55A inittext CODE >746:/tmp/xcXB98vi7.s
+55B inittext CODE >747:/tmp/xcXB98vi7.s
+55C inittext CODE >748:/tmp/xcXB98vi7.s
+55D inittext CODE >755:/tmp/xcXB98vi7.s
+55D inittext CODE >756:/tmp/xcXB98vi7.s
+562 inittext CODE >757:/tmp/xcXB98vi7.s
+563 inittext CODE >758:/tmp/xcXB98vi7.s
+564 inittext CODE >759:/tmp/xcXB98vi7.s
+565 inittext CODE >760:/tmp/xcXB98vi7.s
+566 inittext CODE >761:/tmp/xcXB98vi7.s
+567 inittext CODE >762:/tmp/xcXB98vi7.s
+568 inittext CODE >763:/tmp/xcXB98vi7.s
+569 inittext CODE >764:/tmp/xcXB98vi7.s
+56A inittext CODE >765:/tmp/xcXB98vi7.s
+56B inittext CODE >766:/tmp/xcXB98vi7.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_i 32 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_j 30 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_k 2E 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_l 2C 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+___latbits 2 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 2008 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__size_of_init_ssd 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Hstrings 0 0 ABS 0 strings -
+_LEFT 36 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_STOP 55 0 BANK0 1 bssBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+___sp 0 0 STACK 2 stack /tmp/xcX2F3YBt.o
+_main B5C 0 CODE 0 maintext dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+start 0 0 CODE 0 init /tmp/xcX2F3YBt.o
+__size_of_main 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_init_digital_keypad A84 0 CODE 0 text4 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+read_digital_keypad@mode 71 0 COMMON 1 cstackCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+read_digital_keypad@once 7D 0 COMMON 1 dataCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+intlevel0 0 0 ENTRY 0 functab /tmp/xcX2F3YBt.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xcX2F3YBt.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xcX2F3YBt.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xcX2F3YBt.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xcX2F3YBt.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xcX2F3YBt.o
+_init_ssd A9A 0 CODE 0 text3 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_init_ssd AB2 0 CODE 0 text3 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__pidataCOMMON A76 0 CODE 0 idataCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+_display CD8 0 CODE 0 text5 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+main@key 4E 0 BANK0 1 cstackBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+main@ssd 46 0 BANK0 1 cstackBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+___stackhi 0 0 ABS 0 - /tmp/xcX2F3YBt.o
+___stacklo 0 0 ABS 0 - /tmp/xcX2F3YBt.o
+_init_config A84 0 CODE 0 text2 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+__size_of_read_digital_keypad 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+start_initialization FC0 0 CODE 0 cinit dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__pcstackBANK0 38 0 BANK0 1 cstackBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xcX2F3YBt.o
+_read_digital_keypad B08 0 CODE 0 text1 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FC0 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 2008 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcX2F3YBt.o
+__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__end_of_read_digital_keypad B5C 0 CODE 0 text1 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__pmaintext B5C 0 CODE 0 maintext dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hinittext 0 0 ABS 0 inittext -
+main@F870 20 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+main@digit 38 0 BANK0 1 cstackBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__size_of_display 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__end_of_init_config A9A 0 CODE 0 text2 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+main@count1 4C 0 BANK0 1 cstackBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+init_fetch0 AB2 0 CODE 0 inittext dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+main@prev_count 4A 0 BANK0 1 cstackBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 B08 0 CODE 0 text1 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__ptext2 A84 0 CODE 0 text2 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__ptext3 A9A 0 CODE 0 text3 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__ptext4 A78 0 CODE 0 text4 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__ptext5 CD8 0 CODE 0 text5 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__size_of_init_digital_keypad 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+display@digit 78 0 COMMON 1 cstackCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__end_of_display FC0 0 CODE 0 text5 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__pidataBANK0 AD8 0 CODE 0 idataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hend_init 6 0 CODE 0 end_init -
+init_ram0 ABA 0 CODE 0 inittext dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+display@data 77 0 COMMON 1 cstackCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+display@i_41 75 0 COMMON 1 cstackCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+display@wait 4F 0 BANK0 1 bssBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_init_digital_keypad A78 0 CODE 0 text4 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__end_of_main CD8 0 CODE 0 maintext dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_PORTA 5 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_RIGHT 53 0 BANK0 1 bssBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_START 34 0 BANK0 1 dataBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_TRISA 85 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_count 51 0 BANK0 1 bssBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__size_of_init_config 0 0 ABS 0 - dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__initialization FC0 0 CODE 0 cinit dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__pbssBANK0 4F 0 BANK0 1 bssBANK0 dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+__pdataCOMMON 7D 0 COMMON 1 dataCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+display@i 73 0 COMMON 1 cstackCOMMON dist/default/production/A17-Scrolling-Number-Marquee-on-SSD-with-Scroll-direction-control.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7E0 FC0 20 2
+text1 0 584 B08 2A 2
+text2 0 542 A84 B 2
+text3 0 54D A9A C 2
+text4 0 53C A78 6 2
+text5 0 66C CD8 174 2
+idataCOMMON 0 53B A76 1 2
+maintext 0 5AE B5C BE 2
+cstackCOMMON 1 70 70 E 1
+inittext 0 559 AB2 13 2
+reset_vec 0 0 0 3 2
+idataBANK0 0 56C AD8 18 2
+dataBANK0 1 20 20 37 1
+config 0 2007 400E 1 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
