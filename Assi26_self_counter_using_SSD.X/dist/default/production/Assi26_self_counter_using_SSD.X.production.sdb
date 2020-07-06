@@ -1,0 +1,229 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"5 /opt/microchip/xc8/v2.10/pic/sources/c90/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.10/pic/sources/c90/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 /opt/microchip/xc8/v2.10/pic/sources/c90/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.10/pic/sources/c90/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"4 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/digital_keypad.c
+[v _init_digital_keypad init_digital_keypad `(v  1 e 1 0 ]
+"10
+[v _read_digital_keypad read_digital_keypad `(uc  1 e 1 0 ]
+"3 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/isr.c
+[v _isr isr `II(v  1 e 1 0 ]
+"16 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/main.c
+[v _init_config init_config `(v  1 s 1 init_config ]
+"26
+[v _main main `(v  1 e 1 0 ]
+"4 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/SSD.c
+[v _init_ssd init_ssd `(v  1 e 1 0 ]
+"17
+[v _display display `(v  1 e 1 0 ]
+"3 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/Timers.c
+[v _init_timer2 init_timer2 `(v  1 e 1 0 ]
+[s S122 . 1 `uc 1 C 1 0 :1:0 
+`uc 1 DC 1 0 :1:1 
+`uc 1 Z 1 0 :1:2 
+`uc 1 nPD 1 0 :1:3 
+`uc 1 nTO 1 0 :1:4 
+`uc 1 RP 1 0 :2:5 
+`uc 1 IRP 1 0 :1:7 
+]
+"99 /opt/microchip/xc8/v2.10/pic/include/pic16f877a.h
+[s S130 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RP0 1 0 :1:5 
+`uc 1 RP1 1 0 :1:6 
+]
+[s S134 . 1 `uc 1 CARRY 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ZERO 1 0 :1:2 
+]
+[u S138 . 1 `S122 1 . 1 0 `S130 1 . 1 0 `S134 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES138  1 e 1 @3 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S159 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S168 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S173 . 1 `S159 1 . 1 0 `S168 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES173  1 e 1 @11 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2288
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2295
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2316
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+[s S102 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"2331
+[u S109 . 1 `S102 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES109  1 e 1 @396 ]
+"2361
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2569
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2629
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2872
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
+"2875
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
+"2896
+[v _TMR2IE TMR2IE `VEb  1 e 0 @1121 ]
+"2899
+[v _TMR2IF TMR2IF `VEb  1 e 0 @97 ]
+"2902
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"14 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/main.c
+[v _count1 count1 `ui  1 e 2 0 ]
+"26
+[v _main main `(v  1 e 1 0 ]
+{
+"28
+[v main@digit digit `[10]uc  1 a 10 11 ]
+"29
+[v main@ssd ssd `[4]uc  1 a 4 21 ]
+"30
+[v main@start start `ui  1 a 2 26 ]
+"27
+[v main@check check `uc  1 a 1 29 ]
+[v main@prev_count prev_count `uc  1 a 1 28 ]
+[v main@key key `uc  1 a 1 25 ]
+[v main@F864 F864 `[10]uc  1 s 10 F864 ]
+"64
+} 0
+"10 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/digital_keypad.c
+[v _read_digital_keypad read_digital_keypad `(uc  1 e 1 0 ]
+{
+[v read_digital_keypad@mode mode `uc  1 a 1 wreg ]
+[v read_digital_keypad@mode mode `uc  1 a 1 wreg ]
+"12
+[v read_digital_keypad@once once `uc  1 s 1 once ]
+"14
+[v read_digital_keypad@mode mode `uc  1 a 1 3 ]
+"33
+} 0
+"16 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/main.c
+[v _init_config init_config `(v  1 s 1 init_config ]
+{
+"24
+} 0
+"3 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/Timers.c
+[v _init_timer2 init_timer2 `(v  1 e 1 0 ]
+{
+"20
+} 0
+"4 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/SSD.c
+[v _init_ssd init_ssd `(v  1 e 1 0 ]
+{
+"15
+} 0
+"4 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/digital_keypad.c
+[v _init_digital_keypad init_digital_keypad `(v  1 e 1 0 ]
+{
+"8
+} 0
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 2 ]
+[v eeprom_write@addr addr `uc  1 a 1 4 ]
+"9
+} 0
+"6 /opt/microchip/xc8/v2.10/pic/sources/c90/pic/__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 3 ]
+"19
+} 0
+"17 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/SSD.c
+[v _display display `(v  1 e 1 0 ]
+{
+[v display@data data `*.4uc  1 a 1 wreg ]
+"25
+[v display@i i `ui  1 a 2 3 ]
+"19
+[v display@digit digit `uc  1 a 1 6 ]
+"17
+[v display@data data `*.4uc  1 a 1 wreg ]
+"21
+[v display@data data `*.4uc  1 a 1 5 ]
+"27
+} 0
+"5 /opt/microchip/xc8/v2.10/pic/sources/c90/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 /opt/microchip/xc8/v2.10/pic/sources/c90/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 7 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 9 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
+"30
+} 0
+"3 /home/ubuntu/MPLABXProjects/Assignments/Assi26_self_counter_using_SSD.X/isr.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"5
+[v isr@wait wait `ui  1 s 2 wait ]
+"23
+} 0
